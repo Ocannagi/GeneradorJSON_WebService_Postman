@@ -19,9 +19,9 @@ namespace GeneradorVariablesPostmanADUWS
             this.actaLocal = actaLocal;
             this.soyHYS = soyHYS;
             if (soyHYS)
-                this.Text = "FrmRepresentante - Personal HYS";
+                this.Text = "Carga de Personal HYS";
             else
-                this.Text = "FrmRepresentante - Personal Medicina";
+                this.Text = "Carga de Personal Medicina";
 
             this.lstRepresentante.DrawMode = DrawMode.OwnerDrawFixed;
 
@@ -79,9 +79,9 @@ namespace GeneradorVariablesPostmanADUWS
         private void MostrarRegistrosMed()
         {
             lstRepresentante.Items.Clear();
-            if (FrmActaLocal.PersonalMedPropInternas.Count > 0)
+            if (this.actaLocal.PersonalMedPropInternas.Count > 0)
             {
-                foreach (var Med in FrmActaLocal.PersonalMedPropInternas)
+                foreach (var Med in this.actaLocal.PersonalMedPropInternas)
                 {
                     lstRepresentante.Items.Add($"{Med.CUIT.value}{'*'.Repeat(espaciosCuit - Med.CUIT.value.Length + 1)}{Med.Matricula.value}{'*'.Repeat(espaciosMatricula - Med.Matricula.value.Length + 1)}{Med.Categoria.value}{'*'.Repeat(espaciosCondCat - Med.Categoria.value.Length + 1)}{Med.Condicion.value}{'*'.Repeat(espaciosCondCat - txtCondicion.Text.Length + 1)}");
                 }
@@ -91,9 +91,9 @@ namespace GeneradorVariablesPostmanADUWS
         private void MostrarRegistrosHYS()
         {
             lstRepresentante.Items.Clear();
-            if (FrmActaLocal.PersonalHYSPropInternas.Count > 0)
+            if (this.actaLocal.PersonalHYSPropInternas.Count > 0)
             {
-                foreach (var personaHYS in FrmActaLocal.PersonalHYSPropInternas)
+                foreach (var personaHYS in this.actaLocal.PersonalHYSPropInternas)
                 {
                     lstRepresentante.Items.Add($"{personaHYS.CUIT.value}{'*'.Repeat(espaciosCuit - personaHYS.CUIT.value.Length + 1)}{personaHYS.Matricula.value}{'*'.Repeat(espaciosMatricula - personaHYS.Matricula.value.Length + 1)}{personaHYS.Categoria.value}{'*'.Repeat(espaciosCondCat - personaHYS.Categoria.value.Length + 1)}{personaHYS.Condicion.value}{'*'.Repeat(espaciosCondCat - txtCondicion.Text.Length + 1)}");
                 }
@@ -114,11 +114,11 @@ namespace GeneradorVariablesPostmanADUWS
 
         private void SetearPersonalMedPropInternas()
         {
-            FrmActaLocal.PersonalMedPropInternas.Clear();
+            this.actaLocal.PersonalMedPropInternas.Clear();
             this.actaLocal.txtPersonalMedicina.Text = "";
             if (lstRepresentante.Items.Count == 1)
             {
-                FrmActaLocal.PersonalMedPropInternas.Add(new EntidadActaLocal.Representante
+                this.actaLocal.PersonalMedPropInternas.Add(new EntidadActaLocal.Representante
                 {
                     CUIT = new EntidadActaLocal.BaseClassActaLocal
                     {
@@ -150,7 +150,7 @@ namespace GeneradorVariablesPostmanADUWS
                 string hijos = "";
                 foreach (var Med in lstRepresentante.Items)
                 {
-                    FrmActaLocal.PersonalMedPropInternas.Add(new EntidadActaLocal.Representante
+                    this.actaLocal.PersonalMedPropInternas.Add(new EntidadActaLocal.Representante
                     {
                         CUIT = new EntidadActaLocal.BaseClassActaLocal
                         {
@@ -184,11 +184,11 @@ namespace GeneradorVariablesPostmanADUWS
 
         private void SetearPersonalHYSPropInternas()
         {
-            FrmActaLocal.PersonalHYSPropInternas.Clear();
+            this.actaLocal.PersonalHYSPropInternas.Clear();
             this.actaLocal.txtPersonalHYS.Text = "";
             if (lstRepresentante.Items.Count == 1)
             {
-                FrmActaLocal.PersonalHYSPropInternas.Add(new EntidadActaLocal.Representante
+                this.actaLocal.PersonalHYSPropInternas.Add(new EntidadActaLocal.Representante
                 {
                     CUIT = new EntidadActaLocal.BaseClassActaLocal
                     {
@@ -220,7 +220,7 @@ namespace GeneradorVariablesPostmanADUWS
                 string hijos = "";
                 foreach (var HYS in lstRepresentante.Items)
                 {
-                    FrmActaLocal.PersonalHYSPropInternas.Add(new EntidadActaLocal.Representante
+                    this.actaLocal.PersonalHYSPropInternas.Add(new EntidadActaLocal.Representante
                     {
                         CUIT = new EntidadActaLocal.BaseClassActaLocal
                         {
@@ -305,7 +305,7 @@ namespace GeneradorVariablesPostmanADUWS
             {
                 if (e.Index != ((ListBox)sender).SelectedIndex)
                 {
-                    FuncionesFriend.DrawItemAmarillo(sender, e);
+                    FuncionesFriend.DrawItemAmarillito(sender, e);
                 }
                 else
                 {

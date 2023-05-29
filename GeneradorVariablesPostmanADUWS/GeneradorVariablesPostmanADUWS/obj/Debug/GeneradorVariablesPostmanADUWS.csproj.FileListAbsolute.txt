@@ -31,3 +31,5 @@ C:\Users\ngomez\Documents\Visual Studio 2019\Projects\GeneradorVariablesPostmanA
 C:\Users\ngomez\Documents\Visual Studio 2019\Projects\GeneradorVariablesPostmanADUWS\GeneradorVariablesPostmanADUWS\obj\Debug\GeneradorVariablesPostmanADUWS.FrmInspectoresSecundarios.resources
 C:\Users\ngomez\Documents\Visual Studio 2019\Projects\GeneradorVariablesPostmanADUWS\GeneradorVariablesPostmanADUWS\obj\Debug\GeneradorVariablesPostmanADUWS.FrmRepresentante.resources
 C:\Users\ngomez\Documents\Visual Studio 2019\Projects\GeneradorVariablesPostmanADUWS\GeneradorVariablesPostmanADUWS\obj\Debug\GeneradorVariablesPostmanADUWS.FrmPersonaAtend_Gremio.resources
+C:\Users\ngomez\Documents\Visual Studio 2019\Projects\GeneradorVariablesPostmanADUWS\GeneradorVariablesPostmanADUWS\obj\Debug\GeneradorVariablesPostmanADUWS.FrmConsideraciones.resources
+C:\Users\ngomez\Documents\Visual Studio 2019\Projects\GeneradorVariablesPostmanADUWS\GeneradorVariablesPostmanADUWS\obj\Debug\GeneradorVariablesPostmanADUWS.FrmIteracion.resources

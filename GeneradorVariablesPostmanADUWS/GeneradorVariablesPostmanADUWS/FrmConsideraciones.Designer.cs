@@ -1,7 +1,7 @@
 ﻿
 namespace GeneradorVariablesPostmanADUWS
 {
-    partial class FrmPersonaAtend_Gremio
+    partial class FrmConsideraciones
     {
         /// <summary>
         /// Required designer variable.
@@ -30,65 +30,33 @@ namespace GeneradorVariablesPostmanADUWS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonaAtend_Gremio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsideraciones));
             this.label8 = new System.Windows.Forms.Label();
-            this.lblCodList = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNombreApellido = new System.Windows.Forms.TextBox();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.lstConsideraciones = new System.Windows.Forms.ListBox();
+            this.ttip = new System.Windows.Forms.ToolTip(this.components);
             this.tsAgregar = new System.Windows.Forms.ToolStripButton();
             this.tsEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsModificar = new System.Windows.Forms.ToolStripButton();
             this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
-            this.lstPersona_Gremio = new System.Windows.Forms.ListBox();
-            this.ttip = new System.Windows.Forms.ToolTip(this.components);
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblGremio = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(280, 427);
+            this.label8.Location = new System.Drawing.Point(268, 428);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(510, 13);
             this.label8.TabIndex = 34;
             this.label8.Text = "Advertencia: se reservó el uso del signo asterisco para demarcar los espacios ent" +
     "re columnas en el ListBox";
-            // 
-            // lblCodList
-            // 
-            this.lblCodList.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblCodList.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodList.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCodList.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblCodList.Location = new System.Drawing.Point(745, 208);
-            this.lblCodList.Name = "lblCodList";
-            this.lblCodList.Size = new System.Drawing.Size(44, 17);
-            this.lblCodList.TabIndex = 33;
-            this.lblCodList.Text = "Cód->";
-            this.lblCodList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label6.Location = new System.Drawing.Point(559, 208);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(189, 17);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Email";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -96,66 +64,50 @@ namespace GeneradorVariablesPostmanADUWS
             this.label5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label5.Location = new System.Drawing.Point(192, 208);
+            this.label5.Location = new System.Drawing.Point(180, 209);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(372, 17);
+            this.label5.Size = new System.Drawing.Size(596, 17);
             this.label5.TabIndex = 31;
-            this.label5.Text = "Nombre y Apellido";
+            this.label5.Text = "Observación";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtDNI
+            // txtCodigo
             // 
-            this.txtDNI.Location = new System.Drawing.Point(166, 85);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(239, 20);
-            this.txtDNI.TabIndex = 30;
-            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
+            this.txtCodigo.Location = new System.Drawing.Point(129, 65);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(118, 20);
+            this.txtCodigo.TabIndex = 30;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(37, 86);
+            this.label4.Location = new System.Drawing.Point(26, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 16);
+            this.label4.Size = new System.Drawing.Size(55, 16);
             this.label4.TabIndex = 29;
-            this.label4.Text = "DNI:";
+            this.label4.Text = "Codigo:";
             // 
-            // txtNombreApellido
+            // txtObservacion
             // 
-            this.txtNombreApellido.Location = new System.Drawing.Point(166, 111);
-            this.txtNombreApellido.Name = "txtNombreApellido";
-            this.txtNombreApellido.Size = new System.Drawing.Size(239, 20);
-            this.txtNombreApellido.TabIndex = 28;
-            this.txtNombreApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreApellido_KeyPress);
+            this.txtObservacion.Location = new System.Drawing.Point(129, 101);
+            this.txtObservacion.Multiline = true;
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtObservacion.Size = new System.Drawing.Size(468, 81);
+            this.txtObservacion.TabIndex = 28;
+            this.txtObservacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtObservacion_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 112);
+            this.label3.Location = new System.Drawing.Point(26, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 16);
+            this.label3.Size = new System.Drawing.Size(88, 16);
             this.label3.TabIndex = 27;
-            this.label3.Text = "Nombre y Apellido:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(166, 137);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(239, 20);
-            this.txtEmail.TabIndex = 24;
-            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 138);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Email:";
+            this.label3.Text = "Observacion:";
             // 
             // lblCodigo
             // 
@@ -163,11 +115,11 @@ namespace GeneradorVariablesPostmanADUWS
             this.lblCodigo.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblCodigo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblCodigo.Location = new System.Drawing.Point(39, 208);
+            this.lblCodigo.Location = new System.Drawing.Point(27, 209);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(154, 17);
             this.lblCodigo.TabIndex = 22;
-            this.lblCodigo.Text = "DNI";
+            this.lblCodigo.Text = "Código";
             this.lblCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // toolStrip1
@@ -178,11 +130,24 @@ namespace GeneradorVariablesPostmanADUWS
             this.tsEliminar,
             this.tsModificar,
             this.tsLimpiar});
-            this.toolStrip1.Location = new System.Drawing.Point(640, 171);
+            this.toolStrip1.Location = new System.Drawing.Point(628, 172);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(148, 37);
             this.toolStrip1.TabIndex = 21;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // lstConsideraciones
+            // 
+            this.lstConsideraciones.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstConsideraciones.FormattingEnabled = true;
+            this.lstConsideraciones.ItemHeight = 15;
+            this.lstConsideraciones.Location = new System.Drawing.Point(26, 230);
+            this.lstConsideraciones.Name = "lstConsideraciones";
+            this.lstConsideraciones.Size = new System.Drawing.Size(750, 184);
+            this.lstConsideraciones.TabIndex = 20;
+            this.lstConsideraciones.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstConsideraciones_DrawItem);
+            this.lstConsideraciones.SelectedIndexChanged += new System.EventHandler(this.lstConsideraciones_SelectedIndexChanged);
+            this.lstConsideraciones.DoubleClick += new System.EventHandler(this.lstConsideraciones_DoubleClick);
             // 
             // tsAgregar
             // 
@@ -231,69 +196,25 @@ namespace GeneradorVariablesPostmanADUWS
             this.tsLimpiar.Text = "Limpiar";
             this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
-            // lstPersona_Gremio
-            // 
-            this.lstPersona_Gremio.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstPersona_Gremio.FormattingEnabled = true;
-            this.lstPersona_Gremio.HorizontalExtent = 1100;
-            this.lstPersona_Gremio.HorizontalScrollbar = true;
-            this.lstPersona_Gremio.ItemHeight = 15;
-            this.lstPersona_Gremio.Location = new System.Drawing.Point(38, 229);
-            this.lstPersona_Gremio.Name = "lstPersona_Gremio";
-            this.lstPersona_Gremio.ScrollAlwaysVisible = true;
-            this.lstPersona_Gremio.Size = new System.Drawing.Size(750, 184);
-            this.lstPersona_Gremio.TabIndex = 20;
-            this.lstPersona_Gremio.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstPersona_DrawItem);
-            this.lstPersona_Gremio.SelectedIndexChanged += new System.EventHandler(this.lstPersona_SelectedIndexChanged);
-            this.lstPersona_Gremio.DoubleClick += new System.EventHandler(this.lstPersona_DoubleClick);
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(166, 163);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(239, 20);
-            this.txtCodigo.TabIndex = 36;
-            this.txtCodigo.Visible = false;
-            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
-            // 
-            // lblGremio
-            // 
-            this.lblGremio.AutoSize = true;
-            this.lblGremio.Enabled = false;
-            this.lblGremio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGremio.Location = new System.Drawing.Point(37, 164);
-            this.lblGremio.Name = "lblGremio";
-            this.lblGremio.Size = new System.Drawing.Size(102, 16);
-            this.lblGremio.TabIndex = 35;
-            this.lblGremio.Text = "Código Gremio:";
-            this.lblGremio.Visible = false;
-            // 
-            // FrmPersonaAtend_Gremio
+            // FrmConsideraciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.lblGremio);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.lblCodList);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDNI);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtNombreApellido);
+            this.Controls.Add(this.txtObservacion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.lstPersona_Gremio);
+            this.Controls.Add(this.lstConsideraciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmPersonaAtend_Gremio";
-            this.Text = "FrmPersona";
-            this.Load += new System.EventHandler(this.FrmPersonaAtend_Gremio_Load);
+            this.Name = "FrmConsideraciones";
+            this.Text = "Carga de Consideraciones";
+            this.Load += new System.EventHandler(this.FrmConsideraciones_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -304,24 +225,18 @@ namespace GeneradorVariablesPostmanADUWS
         #endregion
 
         private System.Windows.Forms.Label label8;
-        internal System.Windows.Forms.Label lblCodList;
-        internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNombreApellido;
+        private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.ToolStrip toolStrip1;
         internal System.Windows.Forms.ToolStripButton tsAgregar;
         internal System.Windows.Forms.ToolStripButton tsEliminar;
         internal System.Windows.Forms.ToolStripButton tsModificar;
         internal System.Windows.Forms.ToolStripButton tsLimpiar;
-        internal System.Windows.Forms.ListBox lstPersona_Gremio;
+        internal System.Windows.Forms.ListBox lstConsideraciones;
         private System.Windows.Forms.ToolTip ttip;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblGremio;
     }
 }

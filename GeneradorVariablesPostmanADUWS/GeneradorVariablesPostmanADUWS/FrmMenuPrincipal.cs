@@ -12,9 +12,8 @@ namespace GeneradorVariablesPostmanADUWS
 {
     public partial class FrmMenuPrincipal : Form
     {
-        internal bool esActaLocal = false;
-
         public FrmActaLocal actaLocal;
+        public FrmIteracion iteracion;
         
         public FrmMenuPrincipal()
         {
@@ -23,10 +22,17 @@ namespace GeneradorVariablesPostmanADUWS
 
         private void btnActaLocal_Click(object sender, EventArgs e)
         {
-            esActaLocal = true;
             this.Hide();
-            this.actaLocal = new FrmActaLocal(this);
+            this.actaLocal = new FrmActaLocal(this, true);
             actaLocal.Show();
+        }
+
+        private void btnActaRun_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.iteracion = new FrmIteracion(this);
+            iteracion.Show();
+
         }
     }
 }

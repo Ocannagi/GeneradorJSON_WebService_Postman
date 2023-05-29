@@ -82,11 +82,23 @@
     <Compile Include="FrmActaLocal.Designer.cs">
       <DependentUpon>FrmActaLocal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsideraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsideraciones.Designer.cs">
+      <DependentUpon>FrmConsideraciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInspectoresSecundarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmInspectoresSecundarios.Designer.cs">
       <DependentUpon>FrmInspectoresSecundarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIteracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIteracion.Designer.cs">
+      <DependentUpon>FrmIteracion.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -108,14 +120,19 @@
     </Compile>
     <Compile Include="Funciones\FuncionesFriend.cs" />
     <Compile Include="Funciones\FuncionesStd.cs" />
-    <Compile Include="Funciones\Validaciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmActaLocal.resx">
       <DependentUpon>FrmActaLocal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsideraciones.resx">
+      <DependentUpon>FrmConsideraciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInspectoresSecundarios.resx">
       <DependentUpon>FrmInspectoresSecundarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIteracion.resx">
+      <DependentUpon>FrmIteracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
@@ -161,6 +178,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Imagenes\limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Imagenes\entrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Imagenes\flechas-izquierda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

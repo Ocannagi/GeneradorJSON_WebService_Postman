@@ -29,15 +29,10 @@ namespace GeneradorVariablesPostmanADUWS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActaLocal));
             this.btnJSON = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCons = new System.Windows.Forms.Button();
-            this.btnPersGrem = new System.Windows.Forms.Button();
-            this.btnPersAtend = new System.Windows.Forms.Button();
-            this.btnPersMed = new System.Windows.Forms.Button();
-            this.btnPersHYS = new System.Windows.Forms.Button();
-            this.btnInspSec = new System.Windows.Forms.Button();
             this.txtConsideraciones = new System.Windows.Forms.TextBox();
             this.txtPersonaAtendio = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -105,6 +100,12 @@ namespace GeneradorVariablesPostmanADUWS
             this.label17 = new System.Windows.Forms.Label();
             this.txtObservacionHYS = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.btnCons = new System.Windows.Forms.Button();
+            this.btnPersGrem = new System.Windows.Forms.Button();
+            this.btnPersAtend = new System.Windows.Forms.Button();
+            this.btnPersMed = new System.Windows.Forms.Button();
+            this.btnPersHYS = new System.Windows.Forms.Button();
+            this.btnInspSec = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,58 +154,6 @@ namespace GeneradorVariablesPostmanADUWS
             this.groupBox1.Size = new System.Drawing.Size(369, 244);
             this.groupBox1.TabIndex = 56;
             this.groupBox1.TabStop = false;
-            // 
-            // btnCons
-            // 
-            this.btnCons.Location = new System.Drawing.Point(320, 178);
-            this.btnCons.Name = "btnCons";
-            this.btnCons.Size = new System.Drawing.Size(43, 20);
-            this.btnCons.TabIndex = 74;
-            this.btnCons.UseVisualStyleBackColor = true;
-            // 
-            // btnPersGrem
-            // 
-            this.btnPersGrem.Location = new System.Drawing.Point(320, 152);
-            this.btnPersGrem.Name = "btnPersGrem";
-            this.btnPersGrem.Size = new System.Drawing.Size(43, 20);
-            this.btnPersGrem.TabIndex = 73;
-            this.btnPersGrem.UseVisualStyleBackColor = true;
-            // 
-            // btnPersAtend
-            // 
-            this.btnPersAtend.Location = new System.Drawing.Point(320, 126);
-            this.btnPersAtend.Name = "btnPersAtend";
-            this.btnPersAtend.Size = new System.Drawing.Size(43, 20);
-            this.btnPersAtend.TabIndex = 72;
-            this.btnPersAtend.UseVisualStyleBackColor = true;
-            this.btnPersAtend.Click += new System.EventHandler(this.btnPersAtend_Click);
-            // 
-            // btnPersMed
-            // 
-            this.btnPersMed.Location = new System.Drawing.Point(320, 100);
-            this.btnPersMed.Name = "btnPersMed";
-            this.btnPersMed.Size = new System.Drawing.Size(43, 20);
-            this.btnPersMed.TabIndex = 71;
-            this.btnPersMed.UseVisualStyleBackColor = true;
-            this.btnPersMed.Click += new System.EventHandler(this.btnPersMed_Click);
-            // 
-            // btnPersHYS
-            // 
-            this.btnPersHYS.Location = new System.Drawing.Point(320, 74);
-            this.btnPersHYS.Name = "btnPersHYS";
-            this.btnPersHYS.Size = new System.Drawing.Size(43, 20);
-            this.btnPersHYS.TabIndex = 70;
-            this.btnPersHYS.UseVisualStyleBackColor = true;
-            this.btnPersHYS.Click += new System.EventHandler(this.btnPersHYS_Click);
-            // 
-            // btnInspSec
-            // 
-            this.btnInspSec.Location = new System.Drawing.Point(320, 48);
-            this.btnInspSec.Name = "btnInspSec";
-            this.btnInspSec.Size = new System.Drawing.Size(43, 20);
-            this.btnInspSec.TabIndex = 69;
-            this.btnInspSec.UseVisualStyleBackColor = true;
-            this.btnInspSec.Click += new System.EventHandler(this.btnInspSec_Click);
             // 
             // txtConsideraciones
             // 
@@ -772,11 +721,78 @@ namespace GeneradorVariablesPostmanADUWS
             this.label15.TabIndex = 102;
             this.label15.Text = "Observacion HYS";
             // 
+            // btnCons
+            // 
+            this.btnCons.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCons.BackgroundImage")));
+            this.btnCons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCons.Location = new System.Drawing.Point(320, 178);
+            this.btnCons.Name = "btnCons";
+            this.btnCons.Size = new System.Drawing.Size(20, 20);
+            this.btnCons.TabIndex = 74;
+            this.btnCons.UseVisualStyleBackColor = true;
+            this.btnCons.Click += new System.EventHandler(this.btnCons_Click);
+            // 
+            // btnPersGrem
+            // 
+            this.btnPersGrem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersGrem.BackgroundImage")));
+            this.btnPersGrem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPersGrem.Location = new System.Drawing.Point(320, 152);
+            this.btnPersGrem.Name = "btnPersGrem";
+            this.btnPersGrem.Size = new System.Drawing.Size(20, 20);
+            this.btnPersGrem.TabIndex = 73;
+            this.btnPersGrem.UseVisualStyleBackColor = true;
+            this.btnPersGrem.Click += new System.EventHandler(this.btnPersGrem_Click);
+            // 
+            // btnPersAtend
+            // 
+            this.btnPersAtend.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersAtend.BackgroundImage")));
+            this.btnPersAtend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPersAtend.Location = new System.Drawing.Point(320, 126);
+            this.btnPersAtend.Name = "btnPersAtend";
+            this.btnPersAtend.Size = new System.Drawing.Size(20, 20);
+            this.btnPersAtend.TabIndex = 72;
+            this.btnPersAtend.UseVisualStyleBackColor = true;
+            this.btnPersAtend.Click += new System.EventHandler(this.btnPersAtend_Click);
+            // 
+            // btnPersMed
+            // 
+            this.btnPersMed.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersMed.BackgroundImage")));
+            this.btnPersMed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPersMed.Location = new System.Drawing.Point(320, 100);
+            this.btnPersMed.Name = "btnPersMed";
+            this.btnPersMed.Size = new System.Drawing.Size(20, 20);
+            this.btnPersMed.TabIndex = 71;
+            this.btnPersMed.UseVisualStyleBackColor = true;
+            this.btnPersMed.Click += new System.EventHandler(this.btnPersMed_Click);
+            // 
+            // btnPersHYS
+            // 
+            this.btnPersHYS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersHYS.BackgroundImage")));
+            this.btnPersHYS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPersHYS.Location = new System.Drawing.Point(320, 74);
+            this.btnPersHYS.Name = "btnPersHYS";
+            this.btnPersHYS.Size = new System.Drawing.Size(20, 20);
+            this.btnPersHYS.TabIndex = 70;
+            this.btnPersHYS.UseVisualStyleBackColor = true;
+            this.btnPersHYS.Click += new System.EventHandler(this.btnPersHYS_Click);
+            // 
+            // btnInspSec
+            // 
+            this.btnInspSec.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInspSec.BackgroundImage")));
+            this.btnInspSec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInspSec.Location = new System.Drawing.Point(320, 48);
+            this.btnInspSec.Name = "btnInspSec";
+            this.btnInspSec.Size = new System.Drawing.Size(20, 20);
+            this.btnInspSec.TabIndex = 69;
+            this.btnInspSec.UseVisualStyleBackColor = true;
+            this.btnInspSec.Click += new System.EventHandler(this.btnInspSec_Click);
+            // 
             // FrmActaLocal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(910, 533);
             this.Controls.Add(this.txtOtrasObservaciones);
             this.Controls.Add(this.label23);
@@ -836,6 +852,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.btnJSON);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmActaLocal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acta Local";

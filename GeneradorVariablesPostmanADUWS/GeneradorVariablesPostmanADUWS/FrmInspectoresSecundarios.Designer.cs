@@ -30,6 +30,7 @@ namespace GeneradorVariablesPostmanADUWS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInspectoresSecundarios));
             this.lstInspecSecun = new System.Windows.Forms.ListBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsAgregar = new System.Windows.Forms.ToolStripButton();
@@ -151,12 +152,14 @@ namespace GeneradorVariablesPostmanADUWS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtCodInspector);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lstInspecSecun);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmInspectoresSecundarios";
             this.Text = "Carga de Inspectores Secundarios";
             this.Load += new System.EventHandler(this.FrmInspectoresSecundarios_Load);

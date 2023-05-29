@@ -45,5 +45,16 @@ namespace GeneradorVariablesPostmanADUWS.EntidadActaLocal
         public BaseClassActaLocal Email { get; set; }
     }
 
+    class Gremio : Persona
+    {
+        public BaseClassActaLocal Codigo { get; set; }
+    }
+
+    class Consideracion
+    {
+        public BaseClassActaLocal Codigo { get; set; }
+        public BaseClassActaLocal Observacion { get; set; }
+    }
+
 
 }

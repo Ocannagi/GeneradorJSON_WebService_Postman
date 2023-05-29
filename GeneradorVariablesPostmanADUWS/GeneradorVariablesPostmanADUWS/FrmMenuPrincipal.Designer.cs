@@ -29,6 +29,7 @@ namespace GeneradorVariablesPostmanADUWS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal));
             this.btnActaLocal = new System.Windows.Forms.Button();
             this.btnActaRun = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.btnActaRun.TabIndex = 1;
             this.btnActaRun.Text = "Generar una o más Actas para correr en el Run collection de Postman o en Newman";
             this.btnActaRun.UseVisualStyleBackColor = true;
+            this.btnActaRun.Click += new System.EventHandler(this.btnActaRun_Click);
             // 
             // label1
             // 
@@ -69,10 +71,12 @@ namespace GeneradorVariablesPostmanADUWS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(508, 359);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnActaRun);
             this.Controls.Add(this.btnActaLocal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generador de Variables Postman ADU WS";

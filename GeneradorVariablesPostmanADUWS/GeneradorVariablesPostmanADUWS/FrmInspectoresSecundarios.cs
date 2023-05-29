@@ -62,9 +62,9 @@ namespace GeneradorVariablesPostmanADUWS
         private void MostrarRegistros()
         {
             lstInspecSecun.Items.Clear();
-            if (FrmActaLocal.InspectoresSecPropInternas.Count > 0)
+            if (this.actaLocal.InspectoresSecPropInternas.Count > 0)
             {
-                foreach (var inspector in FrmActaLocal.InspectoresSecPropInternas)
+                foreach (var inspector in this.actaLocal.InspectoresSecPropInternas)
                 {
                     lstInspecSecun.Items.Add($"{inspector.value}");
                 }
@@ -83,11 +83,11 @@ namespace GeneradorVariablesPostmanADUWS
         private void SetearInspectoresSecPropInternas()
         {
 
-            FrmActaLocal.InspectoresSecPropInternas.Clear();
+            this.actaLocal.InspectoresSecPropInternas.Clear();
             this.actaLocal.txtInspectoresSecundarios.Text = "";
             if (lstInspecSecun.Items.Count == 1)
             {
-                FrmActaLocal.InspectoresSecPropInternas.Add(new EntidadActaLocal.BaseClassActaLocal { key = "intInspector_", value = lstInspecSecun.Items[0].ToString() });
+                this.actaLocal.InspectoresSecPropInternas.Add(new EntidadActaLocal.BaseClassActaLocal { key = "intInspector_", value = lstInspecSecun.Items[0].ToString() });
 
                 this.actaLocal.txtInspectoresSecundarios.Text = "<int>{{intInspector_}}</int>";
             }
@@ -97,7 +97,7 @@ namespace GeneradorVariablesPostmanADUWS
                 string hijos = "";
                 foreach (var inspector in lstInspecSecun.Items)
                 {
-                    FrmActaLocal.InspectoresSecPropInternas.Add(new EntidadActaLocal.BaseClassActaLocal { key = $"intInspector_{contador}", value = inspector.ToString() });
+                    this.actaLocal.InspectoresSecPropInternas.Add(new EntidadActaLocal.BaseClassActaLocal { key = $"intInspector_{contador}", value = inspector.ToString() });
                     hijos += "<int>{{intInspector_" + contador + "}}</int>\n";
                     contador++;
                 }
@@ -154,7 +154,7 @@ namespace GeneradorVariablesPostmanADUWS
             {
                 if(e.Index != ((ListBox)sender).SelectedIndex)
                 {
-                    FuncionesFriend.DrawItemAmarillo(sender, e);
+                    FuncionesFriend.DrawItemAmarillito(sender, e);
                 }
                 else
                 {

@@ -30,14 +30,11 @@ namespace GeneradorVariablesPostmanADUWS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRepresentante));
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsAgregar = new System.Windows.Forms.ToolStripButton();
-            this.tsEliminar = new System.Windows.Forms.ToolStripButton();
-            this.tsModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
             this.lstRepresentante = new System.Windows.Forms.ListBox();
             this.txtCondicion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +47,10 @@ namespace GeneradorVariablesPostmanADUWS
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.tsAgregar = new System.Windows.Forms.ToolStripButton();
+            this.tsEliminar = new System.Windows.Forms.ToolStripButton();
+            this.tsModificar = new System.Windows.Forms.ToolStripButton();
+            this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,53 +98,6 @@ namespace GeneradorVariablesPostmanADUWS
             this.toolStrip1.Size = new System.Drawing.Size(148, 37);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // tsAgregar
-            // 
-            this.tsAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsAgregar.Image = global::GeneradorVariablesPostmanADUWS.Properties.Resources.agregar;
-            this.tsAgregar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsAgregar.Name = "tsAgregar";
-            this.tsAgregar.Size = new System.Drawing.Size(34, 34);
-            this.tsAgregar.Text = "Agregar";
-            this.tsAgregar.ToolTipText = "Agregar";
-            this.tsAgregar.Click += new System.EventHandler(this.tsAgregar_Click);
-            // 
-            // tsEliminar
-            // 
-            this.tsEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsEliminar.Image = global::GeneradorVariablesPostmanADUWS.Properties.Resources.eliminar;
-            this.tsEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(34, 34);
-            this.tsEliminar.Text = "Eliminar";
-            this.tsEliminar.ToolTipText = "Eliminar";
-            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
-            // 
-            // tsModificar
-            // 
-            this.tsModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsModificar.Image = global::GeneradorVariablesPostmanADUWS.Properties.Resources.modificar;
-            this.tsModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsModificar.Name = "tsModificar";
-            this.tsModificar.Size = new System.Drawing.Size(34, 34);
-            this.tsModificar.Text = "Modificar";
-            this.tsModificar.ToolTipText = "Modificar";
-            this.tsModificar.Click += new System.EventHandler(this.tsModificar_Click);
-            // 
-            // tsLimpiar
-            // 
-            this.tsLimpiar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsLimpiar.Image = global::GeneradorVariablesPostmanADUWS.Properties.Resources.limpiar;
-            this.tsLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(34, 34);
-            this.tsLimpiar.Text = "Limpiar";
-            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // lstRepresentante
             // 
@@ -261,10 +215,58 @@ namespace GeneradorVariablesPostmanADUWS
             this.label8.Text = "Advertencia: se reservó el uso del signo asterisco para demarcar los espacios ent" +
     "re columnas en el ListBox";
             // 
+            // tsAgregar
+            // 
+            this.tsAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsAgregar.Image = global::GeneradorVariablesPostmanADUWS.Properties.Resources.agregar;
+            this.tsAgregar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsAgregar.Name = "tsAgregar";
+            this.tsAgregar.Size = new System.Drawing.Size(34, 34);
+            this.tsAgregar.Text = "Agregar";
+            this.tsAgregar.ToolTipText = "Agregar";
+            this.tsAgregar.Click += new System.EventHandler(this.tsAgregar_Click);
+            // 
+            // tsEliminar
+            // 
+            this.tsEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsEliminar.Image = global::GeneradorVariablesPostmanADUWS.Properties.Resources.eliminar;
+            this.tsEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsEliminar.Name = "tsEliminar";
+            this.tsEliminar.Size = new System.Drawing.Size(34, 34);
+            this.tsEliminar.Text = "Eliminar";
+            this.tsEliminar.ToolTipText = "Eliminar";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
+            // 
+            // tsModificar
+            // 
+            this.tsModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsModificar.Image = global::GeneradorVariablesPostmanADUWS.Properties.Resources.modificar;
+            this.tsModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsModificar.Name = "tsModificar";
+            this.tsModificar.Size = new System.Drawing.Size(34, 34);
+            this.tsModificar.Text = "Modificar";
+            this.tsModificar.ToolTipText = "Modificar";
+            this.tsModificar.Click += new System.EventHandler(this.tsModificar_Click);
+            // 
+            // tsLimpiar
+            // 
+            this.tsLimpiar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsLimpiar.Image = global::GeneradorVariablesPostmanADUWS.Properties.Resources.limpiar;
+            this.tsLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsLimpiar.Name = "tsLimpiar";
+            this.tsLimpiar.Size = new System.Drawing.Size(34, 34);
+            this.tsLimpiar.Text = "Limpiar";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
+            // 
             // FrmRepresentante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -281,6 +283,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lstRepresentante);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRepresentante";
             this.Text = "FrmPersonalHYS";
             this.Load += new System.EventHandler(this.FrmPersonalHYS_Load);

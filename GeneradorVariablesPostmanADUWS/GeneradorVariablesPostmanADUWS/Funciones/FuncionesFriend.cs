@@ -62,6 +62,14 @@ namespace GeneradorVariablesPostmanADUWS.Funciones
             formulario.tsAgregar.Enabled = true;
         }
 
+        public static void SetearHabilitacionBotonesLimpiar(FrmConsideraciones formulario)
+        {
+            formulario.tsEliminar.Enabled = false;
+            formulario.tsModificar.Enabled = false;
+            formulario.tsLimpiar.Enabled = true;
+            formulario.tsAgregar.Enabled = true;
+        }
+
         public static void SetearHabilitacionBotonesDoubleClick(FrmInspectoresSecundarios formulario)
         {
             formulario.tsEliminar.Enabled = true;
@@ -86,6 +94,14 @@ namespace GeneradorVariablesPostmanADUWS.Funciones
             formulario.tsAgregar.Enabled = false;
         }
 
+        public static void SetearHabilitacionBotonesDoubleClick(FrmConsideraciones formulario)
+        {
+            formulario.tsEliminar.Enabled = true;
+            formulario.tsModificar.Enabled = true;
+            formulario.tsLimpiar.Enabled = true;
+            formulario.tsAgregar.Enabled = false;
+        }
+
         public static bool _HayItemSeleccionado(ListBox listBox)
         {
             bool respuesta = true;
@@ -98,7 +114,7 @@ namespace GeneradorVariablesPostmanADUWS.Funciones
             return respuesta;
         }
 
-        public static void DrawItemAmarillo(object sender, DrawItemEventArgs e)
+        public static void DrawItemAmarillito(object sender, DrawItemEventArgs e)
         {
             
             
