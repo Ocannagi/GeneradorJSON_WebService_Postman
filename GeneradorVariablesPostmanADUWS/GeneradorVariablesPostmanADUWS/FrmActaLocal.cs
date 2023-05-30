@@ -20,7 +20,7 @@ namespace GeneradorVariablesPostmanADUWS
         private List<BaseClassActaLocal> actaLocal = new List<BaseClassActaLocal>();
         internal List<BaseClassActaLocal> InspectoresSecPropInternas = new List<BaseClassActaLocal>();
         internal List<Representante> PersonalHYSPropInternas = new List<Representante>();
-        internal  List<Representante> PersonalMedPropInternas = new List<Representante>();
+        internal List<Representante> PersonalMedPropInternas = new List<Representante>();
         internal Persona PersonaAtendioPropInternas = null;
         internal List<Gremio> GremioPropInternas = new List<Gremio>();
         internal List<Consideracion> ConsideracionPropInternas = new List<Consideracion>();
@@ -46,12 +46,14 @@ namespace GeneradorVariablesPostmanADUWS
             {
                 this.Text = "Acta para correr local en Postman";
                 this.btnJSON.Text = "Generar JSON";
+                pcbSRT.Image = Properties.Resources.Logo_SRT_Horizontal_02;
             }
             else
             {
                 this.Text = "Acta para correr dentro de una Iteración en la Run Collection de Postman";
                 this.BackColor = Color.MistyRose;
                 this.btnJSON.Text = "Guardar Iteración";
+                pcbSRT.Image = Properties.Resources.Logo_SRT_Horizontal_03;
             }
 
         }
@@ -97,14 +99,71 @@ namespace GeneradorVariablesPostmanADUWS
                     ((IDictionary<String, Object>)actaIteracion).Add($"{(control as TextBox).Name.Substring(3)}", (control as TextBox).Text);
                 }
             }
-
             CargarInspectoresIteracion(actaIteracion);
             CargarPersHYSIteracion(actaIteracion);
-
-
-            //Agregar complejos aquí
-
+            CargarPersMedIteracion(actaIteracion);
+            CargarPersonaAtendioIteracion(actaIteracion);
+            CargarGremioIteracion(actaIteracion);
+            CargarConsideracionesIteracion(actaIteracion);
             this.iteracion.ListaIteraciones.Add(actaIteracion);
+        }
+
+        private void CargarConsideracionesIteracion(dynamic actaIteracion)
+        {
+            ((IDictionary<String, Object>)actaIteracion).Add($"Consideraciones", $"{txtConsideraciones.Text}");
+
+            if (txtConsideraciones.Text != "")
+            {
+                foreach (var cons in ConsideracionPropInternas)
+                {
+                    ((IDictionary<String, Object>)actaIteracion).Add($"{cons.Codigo.key}", $"{cons.Codigo.value}");
+                    ((IDictionary<String, Object>)actaIteracion).Add($"{cons.Observacion.key}", $"{cons.Observacion.value}");
+                }
+            }
+        }
+
+        private void CargarGremioIteracion(dynamic actaIteracion)
+        {
+            ((IDictionary<String, Object>)actaIteracion).Add($"PersonalGremio", $"{txtPersonalGremio.Text}");
+
+            if (txtPersonalGremio.Text != "")
+            {
+                foreach (var gremio in GremioPropInternas)
+                {
+                    ((IDictionary<String, Object>)actaIteracion).Add($"{gremio.Codigo.key}", $"{gremio.Codigo.value}");
+                    ((IDictionary<String, Object>)actaIteracion).Add($"{gremio.DNI.key}", $"{gremio.DNI.value}");
+                    ((IDictionary<String, Object>)actaIteracion).Add($"{gremio.NombreApellido.key}", $"{gremio.NombreApellido.value}");
+                    ((IDictionary<String, Object>)actaIteracion).Add($"{gremio.Email.key}", $"{gremio.Email.value}");
+                }
+            }
+        }
+
+        private void CargarPersonaAtendioIteracion(dynamic actaIteracion)
+        {
+            ((IDictionary<String, Object>)actaIteracion).Add($"PersonaAtendio", $"{txtPersonaAtendio.Text}");
+
+            if (txtPersonaAtendio.Text != "")
+            {
+                ((IDictionary<String, Object>)actaIteracion).Add($"{PersonaAtendioPropInternas.DNI.key}", $"{PersonaAtendioPropInternas.DNI.value}");
+                ((IDictionary<String, Object>)actaIteracion).Add($"{PersonaAtendioPropInternas.NombreApellido.key}", $"{PersonaAtendioPropInternas.NombreApellido.value}");
+                ((IDictionary<String, Object>)actaIteracion).Add($"{PersonaAtendioPropInternas.Email.key}", $"{PersonaAtendioPropInternas.Email.value}");
+            }
+        }
+
+        private void CargarPersMedIteracion(dynamic actaIteracion)
+        {
+            ((IDictionary<String, Object>)actaIteracion).Add($"PersonalMedicina", $"{txtPersonalMedicina.Text}");
+
+            if (txtPersonalMedicina.Text != "")
+            {
+                foreach (var Med in PersonalMedPropInternas)
+                {
+                    ((IDictionary<String, Object>)actaIteracion).Add($"{Med.CUIT.key}", $"{Med.CUIT.value}");
+                    ((IDictionary<String, Object>)actaIteracion).Add($"{Med.Matricula.key}", $"{Med.Matricula.value}");
+                    ((IDictionary<String, Object>)actaIteracion).Add($"{Med.Categoria.key}", $"{Med.Categoria.value}");
+                    ((IDictionary<String, Object>)actaIteracion).Add($"{Med.Condicion.key}", $"{Med.Condicion.value}");
+                }
+            }
         }
 
         private void CargarPersHYSIteracion(dynamic actaIteracion)
@@ -125,7 +184,7 @@ namespace GeneradorVariablesPostmanADUWS
 
         private void CargarInspectoresIteracion(dynamic actaIteracion)
         {
-            ((IDictionary<String, Object>)actaIteracion).Add($"InspectoresSecundarios",$"{txtInspectoresSecundarios.Text}");
+            ((IDictionary<String, Object>)actaIteracion).Add($"InspectoresSecundarios", $"{txtInspectoresSecundarios.Text}");
             if (txtInspectoresSecundarios.Text != "")
             {
                 foreach (var inspector in InspectoresSecPropInternas)
@@ -141,7 +200,7 @@ namespace GeneradorVariablesPostmanADUWS
             var options = new JsonSerializerOptions { WriteIndented = true };
             var stringJSON = JsonSerializer.Serialize(actaLocal, options);
             stringJSON = stringJSON.Replace("\\u003C", "<").Replace("\\u003E", ">");
-            FuncionesFriend.GuardarArchivo(stringJSON);
+            FuncionesFriend.GuardarArchivo(stringJSON,esActaLocal);
         }
 
         private void CargarListaActaLocal(Control.ControlCollection controls)
@@ -287,6 +346,22 @@ namespace GeneradorVariablesPostmanADUWS
         {
             this.consideraciones = new FrmConsideraciones(this);
             consideraciones.ShowDialog();
+        }
+
+        private void FrmActaLocal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult Op;
+            if(esActaLocal)
+            {
+                Op = MessageBox.Show("¿Está seguro que quiere cerrar el Acta? La información de la presente Acta Local se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Op = MessageBox.Show("¿Está seguro que quiere cerrar el Acta? La información de la presente iteración se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+
+            if (Op == DialogResult.No)
+                e.Cancel=true;
         }
     }
 }

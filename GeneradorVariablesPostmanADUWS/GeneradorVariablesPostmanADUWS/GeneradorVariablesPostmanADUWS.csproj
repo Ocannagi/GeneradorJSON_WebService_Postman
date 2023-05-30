@@ -185,5 +185,14 @@
   <ItemGroup>
     <None Include="bin\Imagenes\flechas-izquierda.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Imagenes\Logo_SRT_Horizontal-04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Imagenes\Logo_SRT_Horizontal-03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Imagenes\Logo_SRT_Horizontal-02.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

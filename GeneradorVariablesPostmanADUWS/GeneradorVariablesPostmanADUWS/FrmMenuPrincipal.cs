@@ -34,5 +34,10 @@ namespace GeneradorVariablesPostmanADUWS
             iteracion.Show();
 
         }
+
+        private void FrmMenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MessageBox.Show("Gracias por usar el Generador de Variables Postman ADU-WS, vuelva prontos :)", "Gracias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

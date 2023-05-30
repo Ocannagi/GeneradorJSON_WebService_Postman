@@ -290,7 +290,9 @@ namespace GeneradorVariablesPostmanADUWS
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lstPersona_Gremio);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmPersonaAtend_Gremio";
             this.Text = "FrmPersona";
             this.Load += new System.EventHandler(this.FrmPersonaAtend_Gremio_Load);

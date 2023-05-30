@@ -12,14 +12,18 @@ namespace GeneradorVariablesPostmanADUWS.Funciones
 {
     internal class FuncionesFriend
     {
-        public static void GuardarArchivo(string stringJson)
+        public static void GuardarArchivo(string stringJson, bool soyLocal)
         {
             try
             {
                 using (SaveFileDialog saveFD = new SaveFileDialog())
                 {
                     saveFD.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-                    saveFD.Filter = "Archivo ActaLocal | *.json";
+                    if (soyLocal)
+                        saveFD.Filter = "Archivo ActaLocal | *.json";
+                    else
+                        saveFD.Filter = "Archivo ActaIteracion | *.json";
+
                     saveFD.DefaultExt = "json";
                     if (saveFD.ShowDialog() == DialogResult.OK)
                     {
@@ -116,16 +120,16 @@ namespace GeneradorVariablesPostmanADUWS.Funciones
 
         public static void DrawItemAmarillito(object sender, DrawItemEventArgs e)
         {
-            
-            
-                e.DrawBackground();
-                Brush amarillito = new SolidBrush(Color.LemonChiffon);
-                Brush negro = Brushes.Black;
-                e.Graphics.FillRectangle(amarillito, e.Bounds);
-                e.Graphics.DrawString(((ListBox)sender).Items[e.Index].ToString(),
-                    e.Font, negro, e.Bounds, StringFormat.GenericDefault);
-                e.DrawFocusRectangle();
-            
+
+
+            e.DrawBackground();
+            Brush amarillito = new SolidBrush(Color.LemonChiffon);
+            Brush negro = Brushes.Black;
+            e.Graphics.FillRectangle(amarillito, e.Bounds);
+            e.Graphics.DrawString(((ListBox)sender).Items[e.Index].ToString(),
+                e.Font, negro, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
+
 
         }
 

@@ -211,7 +211,9 @@ namespace GeneradorVariablesPostmanADUWS
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lstConsideraciones);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmConsideraciones";
             this.Text = "Carga de Consideraciones";
             this.Load += new System.EventHandler(this.FrmConsideraciones_Load);

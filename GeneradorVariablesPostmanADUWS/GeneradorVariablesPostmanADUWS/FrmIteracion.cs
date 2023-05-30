@@ -18,6 +18,7 @@ namespace GeneradorVariablesPostmanADUWS
         FrmMenuPrincipal menuPrincipal;
         FrmActaLocal actaIteracion;
         internal List<ExpandoObject> ListaIteraciones = new List<ExpandoObject>();
+        private bool esActaLocal = false;
 
         public FrmIteracion(FrmMenuPrincipal menuPrincipal)
         {
@@ -40,7 +41,7 @@ namespace GeneradorVariablesPostmanADUWS
         private void btnIteracion_Click(object sender, EventArgs e)
         {
             this.Hide();
-            this.actaIteracion = new FrmActaLocal(menuPrincipal, false, this);
+            this.actaIteracion = new FrmActaLocal(menuPrincipal, esActaLocal, this);
             actaIteracion.Show();
         }
 
@@ -49,7 +50,7 @@ namespace GeneradorVariablesPostmanADUWS
             var options = new JsonSerializerOptions { WriteIndented = true };
             var stringJSON = JsonSerializer.Serialize(ListaIteraciones, options);
             stringJSON = stringJSON.Replace("\\u003C", "<").Replace("\\u003E", ">");
-            FuncionesFriend.GuardarArchivo(stringJSON);
+            FuncionesFriend.GuardarArchivo(stringJSON, esActaLocal);
         }
     }
 }
