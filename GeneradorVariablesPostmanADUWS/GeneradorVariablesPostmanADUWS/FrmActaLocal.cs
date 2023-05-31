@@ -205,45 +205,52 @@ namespace GeneradorVariablesPostmanADUWS
             var options = new JsonSerializerOptions { WriteIndented = true };
             var stringJSON = JsonSerializer.Serialize(actaLocal, options);
             stringJSON = stringJSON.Replace("\\u003C", "<").Replace("\\u003E", ">");
-            FuncionesFriend.GuardarArchivo(stringJSON,esActaLocal);
+            FuncionesFriend.GuardarArchivo(stringJSON, esActaLocal);
         }
 
-        private void CargarListaActaLocal(Control.ControlCollection controls)
+        private void CargarListaActaLocal(Control.ControlCollection controls, bool esModificacion = false)
         {
+            string marca;// Esta marca es un principio para poder hacer las variables de Modificación. En sí, queda a medio hacer hasta que exista la posibilidad de continuar con este desarrollo. La idea es crear un formulario que tenga los mismos parámetros que ya fueron cargados para el alta y que se pueda modificar. En caso de que no se opte por esta opción, entregar una tanda de variables "M"(para el método módificar) con valores idénticos a los del alta
+            if (esModificacion)
+                marca = "_M";
+            else
+                marca = "";
+
             foreach (var control in controls)
             {
                 if (control is TextBox && (control as TextBox).Enabled == true)
                 {
-                    actaLocal.Add(new BaseClassActaLocal { key = $"{(control as TextBox).Name.Substring(3)}", value = (control as TextBox).Text });
+                    actaLocal.Add(new BaseClassActaLocal { key = $"{(control as TextBox).Name.Substring(3)}{marca}", value = (control as TextBox).Text });
                 }
             }
 
-            CargarInspectoresLocal();
-            CargarPersHYSLocal();
-            CargarPersMedLocal();
-            CargarPersonaAtendioLocal();
-            CargarGremioLocal();
-            CargarConsideracionesLocal();
+            CargarInspectoresLocal(marca);
+            CargarPersHYSLocal(marca);
+            CargarPersMedLocal(marca);
+            CargarPersonaAtendioLocal(marca);
+            CargarGremioLocal(marca);
+            CargarConsideracionesLocal(marca);
 
         }
 
-        private void CargarConsideracionesLocal()
+
+        private void CargarConsideracionesLocal(string marca)
         {
-            actaLocal.Add(new BaseClassActaLocal { key = "Consideraciones", value = $"{txtConsideraciones.Text}" });
+            actaLocal.Add(new BaseClassActaLocal { key = $"Consideraciones{marca}", value = $"{txtConsideraciones.Text}" });
 
             if (txtConsideraciones.Text != "")
             {
                 List<BaseClassActaLocal> varInterna = new List<BaseClassActaLocal>();
                 foreach (var cons in ConsideracionPropInternas)
                 {
-                    varInterna.Add(cons.Codigo);
+                    varInterna.Add(new BaseClassActaLocal { key = cons.Codigo.key + marca, value = cons.Codigo.value, type = cons.Codigo.type });
                     varInterna.Add(cons.Observacion);
                 }
                 actaLocal.AddRange(varInterna);
             }
         }
 
-        private void CargarGremioLocal()
+        private void CargarGremioLocal(string marca)
         {
             actaLocal.Add(new BaseClassActaLocal { key = "PersonalGremio", value = $"{txtPersonalGremio.Text}" });
 
@@ -261,7 +268,7 @@ namespace GeneradorVariablesPostmanADUWS
             }
         }
 
-        private void CargarPersonaAtendioLocal()
+        private void CargarPersonaAtendioLocal(string marca)
         {
             actaLocal.Add(new BaseClassActaLocal { key = "PersonaAtendio", value = $"{txtPersonaAtendio.Text}" });
 
@@ -275,7 +282,7 @@ namespace GeneradorVariablesPostmanADUWS
             }
         }
 
-        private void CargarPersMedLocal()
+        private void CargarPersMedLocal(string marca)
         {
             actaLocal.Add(new BaseClassActaLocal { key = "PersonalMedicina", value = $"{txtPersonalMedicina.Text}" });
 
@@ -293,7 +300,7 @@ namespace GeneradorVariablesPostmanADUWS
             }
         }
 
-        private void CargarPersHYSLocal()
+        private void CargarPersHYSLocal(string marca)
         {
             actaLocal.Add(new BaseClassActaLocal { key = "PersonalHYS", value = $"{txtPersonalHYS.Text}" });
             if (txtPersonalHYS.Text != "")
@@ -310,7 +317,7 @@ namespace GeneradorVariablesPostmanADUWS
             }
         }
 
-        private void CargarInspectoresLocal()
+        private void CargarInspectoresLocal(string marca)
         {
             actaLocal.Add(new BaseClassActaLocal { key = "InspectoresSecundarios", value = $"{txtInspectoresSecundarios.Text}" });
             if (txtInspectoresSecundarios.Text != "")
@@ -356,13 +363,13 @@ namespace GeneradorVariablesPostmanADUWS
         private void FrmActaLocal_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult Op;
-            if(esActaLocal)
+            if (esActaLocal)
             {
                 Op = MessageBox.Show("¿Está seguro que quiere cerrar el Acta? La información de la presente Acta Local se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (Op == DialogResult.No)
                     e.Cancel = true;
             }
-            else if(!this.esGuardadoIteracion)
+            else if (!this.esGuardadoIteracion)
             {
                 Op = MessageBox.Show("¿Está seguro que quiere cerrar el Acta? La información de la presente iteración se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (Op == DialogResult.No)
