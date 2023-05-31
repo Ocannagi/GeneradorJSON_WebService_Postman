@@ -35,6 +35,7 @@ namespace GeneradorVariablesPostmanADUWS
         FrmConsideraciones consideraciones;
 
         bool esActaLocal;
+        bool esGuardadoIteracion;
 
         public FrmActaLocal(FrmMenuPrincipal menuPrincipal, bool esActaLocal, FrmIteracion iteracion = null)
         {
@@ -42,6 +43,9 @@ namespace GeneradorVariablesPostmanADUWS
             this.menuPrincipal = menuPrincipal;
             this.iteracion = iteracion;
             this.esActaLocal = esActaLocal;
+
+            this.ttipCodigo.SetToolTip(lblCodigo, "El Código se encuentra deshabilitado. La Colección de Postman está seteada para completar el valor con lo que devuelve el método Alta");
+
             if (esActaLocal)
             {
                 this.Text = "Acta para correr local en Postman";
@@ -54,13 +58,14 @@ namespace GeneradorVariablesPostmanADUWS
                 this.BackColor = Color.MistyRose;
                 this.btnJSON.Text = "Guardar Iteración";
                 pcbSRT.Image = Properties.Resources.Logo_SRT_Horizontal_03;
+                this.esGuardadoIteracion = false;
             }
 
         }
 
         private void FrmActaLocal_Load(object sender, EventArgs e)
         {
-
+            this.txtNumero.Focus();
         }
 
         private void FrmActaLocal_FormClosed(object sender, FormClosedEventArgs e)
@@ -86,7 +91,7 @@ namespace GeneradorVariablesPostmanADUWS
         {
             CargarListaIteracion(this.Controls, actaIteracion);
             this.iteracion.ActualizarContadorIteraciones();
-            this.iteracion.Show();
+            this.esGuardadoIteracion = true;
             this.Close();
         }
 
@@ -94,7 +99,7 @@ namespace GeneradorVariablesPostmanADUWS
         {
             foreach (var control in controls)
             {
-                if (control is TextBox)
+                if (control is TextBox && (control as TextBox).Enabled == true)
                 {
                     ((IDictionary<String, Object>)actaIteracion).Add($"{(control as TextBox).Name.Substring(3)}", (control as TextBox).Text);
                 }
@@ -207,7 +212,7 @@ namespace GeneradorVariablesPostmanADUWS
         {
             foreach (var control in controls)
             {
-                if (control is TextBox)
+                if (control is TextBox && (control as TextBox).Enabled == true)
                 {
                     actaLocal.Add(new BaseClassActaLocal { key = $"{(control as TextBox).Name.Substring(3)}", value = (control as TextBox).Text });
                 }
@@ -354,14 +359,15 @@ namespace GeneradorVariablesPostmanADUWS
             if(esActaLocal)
             {
                 Op = MessageBox.Show("¿Está seguro que quiere cerrar el Acta? La información de la presente Acta Local se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Op == DialogResult.No)
+                    e.Cancel = true;
             }
-            else
+            else if(!this.esGuardadoIteracion)
             {
                 Op = MessageBox.Show("¿Está seguro que quiere cerrar el Acta? La información de la presente iteración se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Op == DialogResult.No)
+                    e.Cancel = true;
             }
-
-            if (Op == DialogResult.No)
-                e.Cancel=true;
         }
     }
 }

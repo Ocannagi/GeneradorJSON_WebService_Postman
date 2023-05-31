@@ -55,6 +55,8 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtIteraciones.ReadOnly = true;
             this.txtIteraciones.Size = new System.Drawing.Size(111, 20);
             this.txtIteraciones.TabIndex = 16;
+            this.txtIteraciones.TabStop = false;
+            this.txtIteraciones.TextChanged += new System.EventHandler(this.txtIteraciones_TextChanged);
             // 
             // btnIteracion
             // 
@@ -64,7 +66,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.btnIteracion.Location = new System.Drawing.Point(203, 265);
             this.btnIteracion.Name = "btnIteracion";
             this.btnIteracion.Size = new System.Drawing.Size(140, 39);
-            this.btnIteracion.TabIndex = 17;
+            this.btnIteracion.TabIndex = 1;
             this.btnIteracion.Text = "Generar nueva Iteracion";
             this.btnIteracion.UseVisualStyleBackColor = false;
             this.btnIteracion.Click += new System.EventHandler(this.btnIteracion_Click);
@@ -76,7 +78,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.btnJsonIter.Location = new System.Drawing.Point(457, 265);
             this.btnJsonIter.Name = "btnJsonIter";
             this.btnJsonIter.Size = new System.Drawing.Size(140, 39);
-            this.btnJsonIter.TabIndex = 18;
+            this.btnJsonIter.TabIndex = 2;
             this.btnJsonIter.Text = "Generar JSON";
             this.btnJsonIter.UseVisualStyleBackColor = false;
             this.btnJsonIter.Click += new System.EventHandler(this.btnJsonIter_Click);

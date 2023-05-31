@@ -52,5 +52,13 @@ namespace GeneradorVariablesPostmanADUWS
             stringJSON = stringJSON.Replace("\\u003C", "<").Replace("\\u003E", ">");
             FuncionesFriend.GuardarArchivo(stringJSON, esActaLocal);
         }
+
+        private void txtIteraciones_TextChanged(object sender, EventArgs e)
+        {
+            if (txtIteraciones.Text == "0")
+                btnJsonIter.Enabled = false;
+            else
+                btnJsonIter.Enabled = true;
+        }
     }
 }

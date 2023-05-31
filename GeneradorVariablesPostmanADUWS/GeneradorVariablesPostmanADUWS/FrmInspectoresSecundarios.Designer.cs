@@ -33,14 +33,14 @@ namespace GeneradorVariablesPostmanADUWS
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInspectoresSecundarios));
             this.lstInspecSecun = new System.Windows.Forms.ListBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCodInspector = new System.Windows.Forms.TextBox();
-            this.ttip = new System.Windows.Forms.ToolTip(this.components);
             this.tsAgregar = new System.Windows.Forms.ToolStripButton();
             this.tsEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsModificar = new System.Windows.Forms.ToolStripButton();
             this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCodInspector = new System.Windows.Forms.TextBox();
+            this.ttip = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.lstInspecSecun.Location = new System.Drawing.Point(152, 188);
             this.lstInspecSecun.Name = "lstInspecSecun";
             this.lstInspecSecun.Size = new System.Drawing.Size(496, 169);
-            this.lstInspecSecun.TabIndex = 0;
+            this.lstInspecSecun.TabIndex = 2;
             this.lstInspecSecun.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstInspecSecun_DrawItem);
             this.lstInspecSecun.SelectedIndexChanged += new System.EventHandler(this.lstInspecSecun_SelectedIndexChanged);
             this.lstInspecSecun.DoubleClick += new System.EventHandler(this.lstInspecSecun_DoubleClick);
@@ -71,35 +71,6 @@ namespace GeneradorVariablesPostmanADUWS
             this.toolStrip1.Size = new System.Drawing.Size(148, 37);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCodigo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblCodigo.Location = new System.Drawing.Point(152, 168);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(496, 17);
-            this.lblCodigo.TabIndex = 2;
-            this.lblCodigo.Text = "Código Inspector Secundario";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Cód. Inspector:";
-            // 
-            // txtCodInspector
-            // 
-            this.txtCodInspector.Location = new System.Drawing.Point(255, 93);
-            this.txtCodInspector.Name = "txtCodInspector";
-            this.txtCodInspector.Size = new System.Drawing.Size(132, 20);
-            this.txtCodInspector.TabIndex = 4;
             // 
             // tsAgregar
             // 
@@ -147,6 +118,42 @@ namespace GeneradorVariablesPostmanADUWS
             this.tsLimpiar.Size = new System.Drawing.Size(34, 34);
             this.tsLimpiar.Text = "Limpiar";
             this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCodigo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblCodigo.Location = new System.Drawing.Point(152, 168);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(496, 17);
+            this.lblCodigo.TabIndex = 2;
+            this.lblCodigo.Text = "Código Inspector Secundario";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(152, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Cód. Inspector:";
+            // 
+            // txtCodInspector
+            // 
+            this.txtCodInspector.Location = new System.Drawing.Point(255, 93);
+            this.txtCodInspector.Name = "txtCodInspector";
+            this.txtCodInspector.Size = new System.Drawing.Size(132, 20);
+            this.txtCodInspector.TabIndex = 1;
+            // 
+            // ttip
+            // 
+            this.ttip.AutomaticDelay = 200;
+            this.ttip.AutoPopDelay = 2000;
+            this.ttip.InitialDelay = 200;
+            this.ttip.ReshowDelay = 40;
             // 
             // FrmInspectoresSecundarios
             // 

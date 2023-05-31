@@ -25,6 +25,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.Hide();
             this.actaLocal = new FrmActaLocal(this, true);
             actaLocal.Show();
+            actaLocal.txtNumero.Focus();
         }
 
         private void btnActaRun_Click(object sender, EventArgs e)

@@ -59,7 +59,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtCategoria.Location = new System.Drawing.Point(141, 128);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(239, 20);
-            this.txtCategoria.TabIndex = 9;
+            this.txtCategoria.TabIndex = 3;
             this.txtCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCategoria_KeyPress);
             // 
             // label1
@@ -164,7 +164,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtCondicion.Location = new System.Drawing.Point(141, 154);
             this.txtCondicion.Name = "txtCondicion";
             this.txtCondicion.Size = new System.Drawing.Size(239, 20);
-            this.txtCondicion.TabIndex = 11;
+            this.txtCondicion.TabIndex = 4;
             this.txtCondicion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCondicion_KeyPress);
             // 
             // label2
@@ -182,7 +182,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtMatricula.Location = new System.Drawing.Point(141, 102);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(239, 20);
-            this.txtMatricula.TabIndex = 13;
+            this.txtMatricula.TabIndex = 2;
             this.txtMatricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatricula_KeyPress);
             // 
             // label3
@@ -200,7 +200,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtCUIT.Location = new System.Drawing.Point(141, 76);
             this.txtCUIT.Name = "txtCUIT";
             this.txtCUIT.Size = new System.Drawing.Size(239, 20);
-            this.txtCUIT.TabIndex = 15;
+            this.txtCUIT.TabIndex = 1;
             this.txtCUIT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCUIT_KeyPress);
             // 
             // label4
@@ -212,6 +212,13 @@ namespace GeneradorVariablesPostmanADUWS
             this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 14;
             this.label4.Text = "CUIT:";
+            // 
+            // ttip
+            // 
+            this.ttip.AutomaticDelay = 200;
+            this.ttip.AutoPopDelay = 2000;
+            this.ttip.InitialDelay = 200;
+            this.ttip.ReshowDelay = 40;
             // 
             // label5
             // 

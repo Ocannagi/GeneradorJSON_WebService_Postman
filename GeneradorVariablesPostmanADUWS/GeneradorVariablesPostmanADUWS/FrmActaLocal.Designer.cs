@@ -29,10 +29,17 @@ namespace GeneradorVariablesPostmanADUWS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActaLocal));
             this.btnJSON = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCons = new System.Windows.Forms.Button();
+            this.btnPersGrem = new System.Windows.Forms.Button();
+            this.btnPersAtend = new System.Windows.Forms.Button();
+            this.btnPersMed = new System.Windows.Forms.Button();
+            this.btnPersHYS = new System.Windows.Forms.Button();
+            this.btnInspSec = new System.Windows.Forms.Button();
             this.txtConsideraciones = new System.Windows.Forms.TextBox();
             this.txtPersonaAtendio = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -101,12 +108,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtObservacionHYS = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.pcbSRT = new System.Windows.Forms.PictureBox();
-            this.btnCons = new System.Windows.Forms.Button();
-            this.btnPersGrem = new System.Windows.Forms.Button();
-            this.btnPersAtend = new System.Windows.Forms.Button();
-            this.btnPersMed = new System.Windows.Forms.Button();
-            this.btnPersHYS = new System.Windows.Forms.Button();
-            this.btnInspSec = new System.Windows.Forms.Button();
+            this.ttipCodigo = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSRT)).BeginInit();
             this.SuspendLayout();
@@ -118,7 +120,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.btnJSON.Location = new System.Drawing.Point(823, 12);
             this.btnJSON.Name = "btnJSON";
             this.btnJSON.Size = new System.Drawing.Size(75, 56);
-            this.btnJSON.TabIndex = 4;
+            this.btnJSON.TabIndex = 94;
             this.btnJSON.Text = "Generar JSON";
             this.btnJSON.UseVisualStyleBackColor = false;
             this.btnJSON.Click += new System.EventHandler(this.btnJSON_Click);
@@ -156,8 +158,74 @@ namespace GeneradorVariablesPostmanADUWS
             this.groupBox1.Location = new System.Drawing.Point(235, 243);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(369, 222);
-            this.groupBox1.TabIndex = 56;
+            this.groupBox1.TabIndex = 82;
             this.groupBox1.TabStop = false;
+            // 
+            // btnCons
+            // 
+            this.btnCons.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCons.BackgroundImage")));
+            this.btnCons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCons.Location = new System.Drawing.Point(320, 178);
+            this.btnCons.Name = "btnCons";
+            this.btnCons.Size = new System.Drawing.Size(20, 20);
+            this.btnCons.TabIndex = 88;
+            this.btnCons.UseVisualStyleBackColor = true;
+            this.btnCons.Click += new System.EventHandler(this.btnCons_Click);
+            // 
+            // btnPersGrem
+            // 
+            this.btnPersGrem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersGrem.BackgroundImage")));
+            this.btnPersGrem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPersGrem.Location = new System.Drawing.Point(320, 152);
+            this.btnPersGrem.Name = "btnPersGrem";
+            this.btnPersGrem.Size = new System.Drawing.Size(20, 20);
+            this.btnPersGrem.TabIndex = 87;
+            this.btnPersGrem.UseVisualStyleBackColor = true;
+            this.btnPersGrem.Click += new System.EventHandler(this.btnPersGrem_Click);
+            // 
+            // btnPersAtend
+            // 
+            this.btnPersAtend.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersAtend.BackgroundImage")));
+            this.btnPersAtend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPersAtend.Location = new System.Drawing.Point(320, 126);
+            this.btnPersAtend.Name = "btnPersAtend";
+            this.btnPersAtend.Size = new System.Drawing.Size(20, 20);
+            this.btnPersAtend.TabIndex = 86;
+            this.btnPersAtend.UseVisualStyleBackColor = true;
+            this.btnPersAtend.Click += new System.EventHandler(this.btnPersAtend_Click);
+            // 
+            // btnPersMed
+            // 
+            this.btnPersMed.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersMed.BackgroundImage")));
+            this.btnPersMed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPersMed.Location = new System.Drawing.Point(320, 100);
+            this.btnPersMed.Name = "btnPersMed";
+            this.btnPersMed.Size = new System.Drawing.Size(20, 20);
+            this.btnPersMed.TabIndex = 85;
+            this.btnPersMed.UseVisualStyleBackColor = true;
+            this.btnPersMed.Click += new System.EventHandler(this.btnPersMed_Click);
+            // 
+            // btnPersHYS
+            // 
+            this.btnPersHYS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersHYS.BackgroundImage")));
+            this.btnPersHYS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPersHYS.Location = new System.Drawing.Point(320, 74);
+            this.btnPersHYS.Name = "btnPersHYS";
+            this.btnPersHYS.Size = new System.Drawing.Size(20, 20);
+            this.btnPersHYS.TabIndex = 84;
+            this.btnPersHYS.UseVisualStyleBackColor = true;
+            this.btnPersHYS.Click += new System.EventHandler(this.btnPersHYS_Click);
+            // 
+            // btnInspSec
+            // 
+            this.btnInspSec.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInspSec.BackgroundImage")));
+            this.btnInspSec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInspSec.Location = new System.Drawing.Point(320, 48);
+            this.btnInspSec.Name = "btnInspSec";
+            this.btnInspSec.Size = new System.Drawing.Size(20, 20);
+            this.btnInspSec.TabIndex = 83;
+            this.btnInspSec.UseVisualStyleBackColor = true;
+            this.btnInspSec.Click += new System.EventHandler(this.btnInspSec_Click);
             // 
             // txtConsideraciones
             // 
@@ -167,7 +235,8 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtConsideraciones.ReadOnly = true;
             this.txtConsideraciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtConsideraciones.Size = new System.Drawing.Size(174, 20);
-            this.txtConsideraciones.TabIndex = 68;
+            this.txtConsideraciones.TabIndex = 99;
+            this.txtConsideraciones.TabStop = false;
             // 
             // txtPersonaAtendio
             // 
@@ -177,7 +246,8 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtPersonaAtendio.ReadOnly = true;
             this.txtPersonaAtendio.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPersonaAtendio.Size = new System.Drawing.Size(174, 20);
-            this.txtPersonaAtendio.TabIndex = 65;
+            this.txtPersonaAtendio.TabIndex = 97;
+            this.txtPersonaAtendio.TabStop = false;
             // 
             // label27
             // 
@@ -205,7 +275,8 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtPersonalGremio.ReadOnly = true;
             this.txtPersonalGremio.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPersonalGremio.Size = new System.Drawing.Size(174, 20);
-            this.txtPersonalGremio.TabIndex = 66;
+            this.txtPersonalGremio.TabIndex = 98;
+            this.txtPersonalGremio.TabStop = false;
             // 
             // label31
             // 
@@ -224,7 +295,8 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtInspectoresSecundarios.ReadOnly = true;
             this.txtInspectoresSecundarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtInspectoresSecundarios.Size = new System.Drawing.Size(174, 20);
-            this.txtInspectoresSecundarios.TabIndex = 59;
+            this.txtInspectoresSecundarios.TabIndex = 94;
+            this.txtInspectoresSecundarios.TabStop = false;
             // 
             // label28
             // 
@@ -243,7 +315,8 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtPersonalHYS.ReadOnly = true;
             this.txtPersonalHYS.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPersonalHYS.Size = new System.Drawing.Size(174, 20);
-            this.txtPersonalHYS.TabIndex = 60;
+            this.txtPersonalHYS.TabIndex = 95;
+            this.txtPersonalHYS.TabStop = false;
             // 
             // label29
             // 
@@ -271,7 +344,8 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtPersonalMedicina.ReadOnly = true;
             this.txtPersonalMedicina.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPersonalMedicina.Size = new System.Drawing.Size(174, 20);
-            this.txtPersonalMedicina.TabIndex = 62;
+            this.txtPersonalMedicina.TabIndex = 96;
+            this.txtPersonalMedicina.TabStop = false;
             // 
             // label33
             // 
@@ -288,7 +362,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtEstado.Location = new System.Drawing.Point(355, 188);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(78, 20);
-            this.txtEstado.TabIndex = 111;
+            this.txtEstado.TabIndex = 81;
             // 
             // label24
             // 
@@ -304,14 +378,14 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtControlART.Location = new System.Drawing.Point(355, 162);
             this.txtControlART.Name = "txtControlART";
             this.txtControlART.Size = new System.Drawing.Size(78, 20);
-            this.txtControlART.TabIndex = 109;
+            this.txtControlART.TabIndex = 80;
             // 
             // txtDescEstablecimiento
             // 
             this.txtDescEstablecimiento.Location = new System.Drawing.Point(135, 501);
             this.txtDescEstablecimiento.Name = "txtDescEstablecimiento";
             this.txtDescEstablecimiento.Size = new System.Drawing.Size(78, 20);
-            this.txtDescEstablecimiento.TabIndex = 97;
+            this.txtDescEstablecimiento.TabIndex = 76;
             // 
             // label19
             // 
@@ -327,7 +401,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtControlMedioAmbiente.Location = new System.Drawing.Point(355, 136);
             this.txtControlMedioAmbiente.Name = "txtControlMedioAmbiente";
             this.txtControlMedioAmbiente.Size = new System.Drawing.Size(78, 20);
-            this.txtControlMedioAmbiente.TabIndex = 108;
+            this.txtControlMedioAmbiente.TabIndex = 79;
             // 
             // label25
             // 
@@ -343,7 +417,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtTelefonoAtendio.Location = new System.Drawing.Point(135, 475);
             this.txtTelefonoAtendio.Name = "txtTelefonoAtendio";
             this.txtTelefonoAtendio.Size = new System.Drawing.Size(78, 20);
-            this.txtTelefonoAtendio.TabIndex = 93;
+            this.txtTelefonoAtendio.TabIndex = 75;
             // 
             // label16
             // 
@@ -377,14 +451,14 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtActaVerificada.Location = new System.Drawing.Point(355, 110);
             this.txtActaVerificada.Name = "txtActaVerificada";
             this.txtActaVerificada.Size = new System.Drawing.Size(78, 20);
-            this.txtActaVerificada.TabIndex = 105;
+            this.txtActaVerificada.TabIndex = 78;
             // 
             // txtHoraEgreso
             // 
             this.txtHoraEgreso.Location = new System.Drawing.Point(355, 84);
             this.txtHoraEgreso.Name = "txtHoraEgreso";
             this.txtHoraEgreso.Size = new System.Drawing.Size(78, 20);
-            this.txtHoraEgreso.TabIndex = 103;
+            this.txtHoraEgreso.TabIndex = 77;
             // 
             // label21
             // 
@@ -400,7 +474,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtPersonalDiscapacidad.Location = new System.Drawing.Point(136, 449);
             this.txtPersonalDiscapacidad.Name = "txtPersonalDiscapacidad";
             this.txtPersonalDiscapacidad.Size = new System.Drawing.Size(78, 20);
-            this.txtPersonalDiscapacidad.TabIndex = 87;
+            this.txtPersonalDiscapacidad.TabIndex = 74;
             // 
             // label11
             // 
@@ -416,14 +490,14 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtPersonalProduccion.Location = new System.Drawing.Point(135, 422);
             this.txtPersonalProduccion.Name = "txtPersonalProduccion";
             this.txtPersonalProduccion.Size = new System.Drawing.Size(78, 20);
-            this.txtPersonalProduccion.TabIndex = 85;
+            this.txtPersonalProduccion.TabIndex = 73;
             // 
             // txtPersonalAdministracion
             // 
             this.txtPersonalAdministracion.Location = new System.Drawing.Point(135, 396);
             this.txtPersonalAdministracion.Name = "txtPersonalAdministracion";
             this.txtPersonalAdministracion.Size = new System.Drawing.Size(78, 20);
-            this.txtPersonalAdministracion.TabIndex = 84;
+            this.txtPersonalAdministracion.TabIndex = 72;
             // 
             // label12
             // 
@@ -448,7 +522,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtEstadoDomicilio.Location = new System.Drawing.Point(135, 370);
             this.txtEstadoDomicilio.Name = "txtEstadoDomicilio";
             this.txtEstadoDomicilio.Size = new System.Drawing.Size(78, 20);
-            this.txtEstadoDomicilio.TabIndex = 81;
+            this.txtEstadoDomicilio.TabIndex = 71;
             // 
             // label8
             // 
@@ -464,14 +538,14 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtCodigoEstablecimiento.Location = new System.Drawing.Point(135, 344);
             this.txtCodigoEstablecimiento.Name = "txtCodigoEstablecimiento";
             this.txtCodigoEstablecimiento.Size = new System.Drawing.Size(78, 20);
-            this.txtCodigoEstablecimiento.TabIndex = 79;
+            this.txtCodigoEstablecimiento.TabIndex = 70;
             // 
             // txtCUIT
             // 
             this.txtCUIT.Location = new System.Drawing.Point(135, 318);
             this.txtCUIT.Name = "txtCUIT";
             this.txtCUIT.Size = new System.Drawing.Size(78, 20);
-            this.txtCUIT.TabIndex = 78;
+            this.txtCUIT.TabIndex = 69;
             // 
             // label9
             // 
@@ -496,7 +570,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtNroExpdteProvincial.Location = new System.Drawing.Point(135, 292);
             this.txtNroExpdteProvincial.Name = "txtNroExpdteProvincial";
             this.txtNroExpdteProvincial.Size = new System.Drawing.Size(78, 20);
-            this.txtNroExpdteProvincial.TabIndex = 75;
+            this.txtNroExpdteProvincial.TabIndex = 68;
             // 
             // label5
             // 
@@ -512,14 +586,14 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtActaProvincial.Location = new System.Drawing.Point(135, 266);
             this.txtActaProvincial.Name = "txtActaProvincial";
             this.txtActaProvincial.Size = new System.Drawing.Size(78, 20);
-            this.txtActaProvincial.TabIndex = 73;
+            this.txtActaProvincial.TabIndex = 67;
             // 
             // txtInspectorPrincipal
             // 
             this.txtInspectorPrincipal.Location = new System.Drawing.Point(135, 240);
             this.txtInspectorPrincipal.Name = "txtInspectorPrincipal";
             this.txtInspectorPrincipal.Size = new System.Drawing.Size(78, 20);
-            this.txtInspectorPrincipal.TabIndex = 72;
+            this.txtInspectorPrincipal.TabIndex = 66;
             // 
             // label6
             // 
@@ -544,7 +618,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtHoraIngreso.Location = new System.Drawing.Point(135, 214);
             this.txtHoraIngreso.Name = "txtHoraIngreso";
             this.txtHoraIngreso.Size = new System.Drawing.Size(78, 20);
-            this.txtHoraIngreso.TabIndex = 69;
+            this.txtHoraIngreso.TabIndex = 65;
             // 
             // label2
             // 
@@ -560,14 +634,14 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtFechaInspeccion.Location = new System.Drawing.Point(135, 188);
             this.txtFechaInspeccion.Name = "txtFechaInspeccion";
             this.txtFechaInspeccion.Size = new System.Drawing.Size(78, 20);
-            this.txtFechaInspeccion.TabIndex = 67;
+            this.txtFechaInspeccion.TabIndex = 64;
             // 
             // txtTipoInspeccion
             // 
             this.txtTipoInspeccion.Location = new System.Drawing.Point(135, 162);
             this.txtTipoInspeccion.Name = "txtTipoInspeccion";
             this.txtTipoInspeccion.Size = new System.Drawing.Size(78, 20);
-            this.txtTipoInspeccion.TabIndex = 66;
+            this.txtTipoInspeccion.TabIndex = 63;
             // 
             // label3
             // 
@@ -592,7 +666,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtTipoActa.Location = new System.Drawing.Point(135, 136);
             this.txtTipoActa.Name = "txtTipoActa";
             this.txtTipoActa.Size = new System.Drawing.Size(78, 20);
-            this.txtTipoActa.TabIndex = 63;
+            this.txtTipoActa.TabIndex = 62;
             // 
             // label1
             // 
@@ -612,10 +686,12 @@ namespace GeneradorVariablesPostmanADUWS
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(135, 84);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(78, 20);
             this.txtCodigo.TabIndex = 60;
+            this.txtCodigo.TabStop = false;
             // 
             // lblNumero
             // 
@@ -642,7 +718,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtOtrasObservaciones.Name = "txtOtrasObservaciones";
             this.txtOtrasObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtOtrasObservaciones.Size = new System.Drawing.Size(263, 45);
-            this.txtOtrasObservaciones.TabIndex = 111;
+            this.txtOtrasObservaciones.TabIndex = 93;
             // 
             // label23
             // 
@@ -660,7 +736,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtOtrosParticipantes.Name = "txtOtrosParticipantes";
             this.txtOtrosParticipantes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtOtrosParticipantes.Size = new System.Drawing.Size(263, 45);
-            this.txtOtrosParticipantes.TabIndex = 109;
+            this.txtOtrosParticipantes.TabIndex = 92;
             // 
             // label18
             // 
@@ -678,7 +754,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtObservacionGremio.Name = "txtObservacionGremio";
             this.txtObservacionGremio.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtObservacionGremio.Size = new System.Drawing.Size(263, 45);
-            this.txtObservacionGremio.TabIndex = 107;
+            this.txtObservacionGremio.TabIndex = 91;
             // 
             // label20
             // 
@@ -696,7 +772,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtObservacionMedicina.Name = "txtObservacionMedicina";
             this.txtObservacionMedicina.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtObservacionMedicina.Size = new System.Drawing.Size(263, 45);
-            this.txtObservacionMedicina.TabIndex = 105;
+            this.txtObservacionMedicina.TabIndex = 90;
             // 
             // label17
             // 
@@ -714,7 +790,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtObservacionHYS.Name = "txtObservacionHYS";
             this.txtObservacionHYS.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtObservacionHYS.Size = new System.Drawing.Size(263, 45);
-            this.txtObservacionHYS.TabIndex = 103;
+            this.txtObservacionHYS.TabIndex = 89;
             // 
             // label15
             // 
@@ -735,71 +811,12 @@ namespace GeneradorVariablesPostmanADUWS
             this.pcbSRT.TabIndex = 112;
             this.pcbSRT.TabStop = false;
             // 
-            // btnCons
+            // ttipCodigo
             // 
-            this.btnCons.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCons.BackgroundImage")));
-            this.btnCons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCons.Location = new System.Drawing.Point(320, 178);
-            this.btnCons.Name = "btnCons";
-            this.btnCons.Size = new System.Drawing.Size(20, 20);
-            this.btnCons.TabIndex = 74;
-            this.btnCons.UseVisualStyleBackColor = true;
-            this.btnCons.Click += new System.EventHandler(this.btnCons_Click);
-            // 
-            // btnPersGrem
-            // 
-            this.btnPersGrem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersGrem.BackgroundImage")));
-            this.btnPersGrem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPersGrem.Location = new System.Drawing.Point(320, 152);
-            this.btnPersGrem.Name = "btnPersGrem";
-            this.btnPersGrem.Size = new System.Drawing.Size(20, 20);
-            this.btnPersGrem.TabIndex = 73;
-            this.btnPersGrem.UseVisualStyleBackColor = true;
-            this.btnPersGrem.Click += new System.EventHandler(this.btnPersGrem_Click);
-            // 
-            // btnPersAtend
-            // 
-            this.btnPersAtend.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersAtend.BackgroundImage")));
-            this.btnPersAtend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPersAtend.Location = new System.Drawing.Point(320, 126);
-            this.btnPersAtend.Name = "btnPersAtend";
-            this.btnPersAtend.Size = new System.Drawing.Size(20, 20);
-            this.btnPersAtend.TabIndex = 72;
-            this.btnPersAtend.UseVisualStyleBackColor = true;
-            this.btnPersAtend.Click += new System.EventHandler(this.btnPersAtend_Click);
-            // 
-            // btnPersMed
-            // 
-            this.btnPersMed.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersMed.BackgroundImage")));
-            this.btnPersMed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPersMed.Location = new System.Drawing.Point(320, 100);
-            this.btnPersMed.Name = "btnPersMed";
-            this.btnPersMed.Size = new System.Drawing.Size(20, 20);
-            this.btnPersMed.TabIndex = 71;
-            this.btnPersMed.UseVisualStyleBackColor = true;
-            this.btnPersMed.Click += new System.EventHandler(this.btnPersMed_Click);
-            // 
-            // btnPersHYS
-            // 
-            this.btnPersHYS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersHYS.BackgroundImage")));
-            this.btnPersHYS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPersHYS.Location = new System.Drawing.Point(320, 74);
-            this.btnPersHYS.Name = "btnPersHYS";
-            this.btnPersHYS.Size = new System.Drawing.Size(20, 20);
-            this.btnPersHYS.TabIndex = 70;
-            this.btnPersHYS.UseVisualStyleBackColor = true;
-            this.btnPersHYS.Click += new System.EventHandler(this.btnPersHYS_Click);
-            // 
-            // btnInspSec
-            // 
-            this.btnInspSec.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInspSec.BackgroundImage")));
-            this.btnInspSec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnInspSec.Location = new System.Drawing.Point(320, 48);
-            this.btnInspSec.Name = "btnInspSec";
-            this.btnInspSec.Size = new System.Drawing.Size(20, 20);
-            this.btnInspSec.TabIndex = 69;
-            this.btnInspSec.UseVisualStyleBackColor = true;
-            this.btnInspSec.Click += new System.EventHandler(this.btnInspSec_Click);
+            this.ttipCodigo.AutomaticDelay = 200;
+            this.ttipCodigo.AutoPopDelay = 5000;
+            this.ttipCodigo.InitialDelay = 200;
+            this.ttipCodigo.ReshowDelay = 40;
             // 
             // FrmActaLocal
             // 
@@ -941,7 +958,6 @@ namespace GeneradorVariablesPostmanADUWS
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTipoActa;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblCodigo;
@@ -962,5 +978,7 @@ namespace GeneradorVariablesPostmanADUWS
         internal System.Windows.Forms.TextBox txtPersonalGremio;
         internal System.Windows.Forms.TextBox txtPersonalMedicina;
         private System.Windows.Forms.PictureBox pcbSRT;
+        private System.Windows.Forms.ToolTip ttipCodigo;
+        internal System.Windows.Forms.TextBox txtNumero;
     }
 }

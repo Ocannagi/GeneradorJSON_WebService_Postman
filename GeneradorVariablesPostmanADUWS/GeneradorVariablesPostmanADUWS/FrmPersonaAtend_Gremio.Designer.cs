@@ -108,7 +108,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtDNI.Location = new System.Drawing.Point(166, 85);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(239, 20);
-            this.txtDNI.TabIndex = 30;
+            this.txtDNI.TabIndex = 1;
             this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // label4
@@ -126,7 +126,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtNombreApellido.Location = new System.Drawing.Point(166, 111);
             this.txtNombreApellido.Name = "txtNombreApellido";
             this.txtNombreApellido.Size = new System.Drawing.Size(239, 20);
-            this.txtNombreApellido.TabIndex = 28;
+            this.txtNombreApellido.TabIndex = 2;
             this.txtNombreApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreApellido_KeyPress);
             // 
             // label3
@@ -144,7 +144,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtEmail.Location = new System.Drawing.Point(166, 137);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(239, 20);
-            this.txtEmail.TabIndex = 24;
+            this.txtEmail.TabIndex = 3;
             this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // label1
@@ -242,10 +242,17 @@ namespace GeneradorVariablesPostmanADUWS
             this.lstPersona_Gremio.Name = "lstPersona_Gremio";
             this.lstPersona_Gremio.ScrollAlwaysVisible = true;
             this.lstPersona_Gremio.Size = new System.Drawing.Size(750, 184);
-            this.lstPersona_Gremio.TabIndex = 20;
+            this.lstPersona_Gremio.TabIndex = 5;
             this.lstPersona_Gremio.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstPersona_DrawItem);
             this.lstPersona_Gremio.SelectedIndexChanged += new System.EventHandler(this.lstPersona_SelectedIndexChanged);
             this.lstPersona_Gremio.DoubleClick += new System.EventHandler(this.lstPersona_DoubleClick);
+            // 
+            // ttip
+            // 
+            this.ttip.AutomaticDelay = 200;
+            this.ttip.AutoPopDelay = 2000;
+            this.ttip.InitialDelay = 200;
+            this.ttip.ReshowDelay = 40;
             // 
             // txtCodigo
             // 
@@ -253,7 +260,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtCodigo.Location = new System.Drawing.Point(166, 163);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(239, 20);
-            this.txtCodigo.TabIndex = 36;
+            this.txtCodigo.TabIndex = 4;
             this.txtCodigo.Visible = false;
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 

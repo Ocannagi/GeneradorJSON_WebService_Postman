@@ -39,12 +39,12 @@ namespace GeneradorVariablesPostmanADUWS
             this.label3 = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.lstConsideraciones = new System.Windows.Forms.ListBox();
-            this.ttip = new System.Windows.Forms.ToolTip(this.components);
             this.tsAgregar = new System.Windows.Forms.ToolStripButton();
             this.tsEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsModificar = new System.Windows.Forms.ToolStripButton();
             this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
+            this.lstConsideraciones = new System.Windows.Forms.ListBox();
+            this.ttip = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +76,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtCodigo.Location = new System.Drawing.Point(129, 65);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(118, 20);
-            this.txtCodigo.TabIndex = 30;
+            this.txtCodigo.TabIndex = 1;
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label4
@@ -96,7 +96,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtObservacion.Size = new System.Drawing.Size(468, 81);
-            this.txtObservacion.TabIndex = 28;
+            this.txtObservacion.TabIndex = 2;
             this.txtObservacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtObservacion_KeyPress);
             // 
             // label3
@@ -135,19 +135,6 @@ namespace GeneradorVariablesPostmanADUWS
             this.toolStrip1.Size = new System.Drawing.Size(148, 37);
             this.toolStrip1.TabIndex = 21;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // lstConsideraciones
-            // 
-            this.lstConsideraciones.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstConsideraciones.FormattingEnabled = true;
-            this.lstConsideraciones.ItemHeight = 15;
-            this.lstConsideraciones.Location = new System.Drawing.Point(26, 230);
-            this.lstConsideraciones.Name = "lstConsideraciones";
-            this.lstConsideraciones.Size = new System.Drawing.Size(750, 184);
-            this.lstConsideraciones.TabIndex = 20;
-            this.lstConsideraciones.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstConsideraciones_DrawItem);
-            this.lstConsideraciones.SelectedIndexChanged += new System.EventHandler(this.lstConsideraciones_SelectedIndexChanged);
-            this.lstConsideraciones.DoubleClick += new System.EventHandler(this.lstConsideraciones_DoubleClick);
             // 
             // tsAgregar
             // 
@@ -195,6 +182,26 @@ namespace GeneradorVariablesPostmanADUWS
             this.tsLimpiar.Size = new System.Drawing.Size(34, 34);
             this.tsLimpiar.Text = "Limpiar";
             this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
+            // 
+            // lstConsideraciones
+            // 
+            this.lstConsideraciones.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstConsideraciones.FormattingEnabled = true;
+            this.lstConsideraciones.ItemHeight = 15;
+            this.lstConsideraciones.Location = new System.Drawing.Point(26, 230);
+            this.lstConsideraciones.Name = "lstConsideraciones";
+            this.lstConsideraciones.Size = new System.Drawing.Size(750, 184);
+            this.lstConsideraciones.TabIndex = 3;
+            this.lstConsideraciones.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstConsideraciones_DrawItem);
+            this.lstConsideraciones.SelectedIndexChanged += new System.EventHandler(this.lstConsideraciones_SelectedIndexChanged);
+            this.lstConsideraciones.DoubleClick += new System.EventHandler(this.lstConsideraciones_DoubleClick);
+            // 
+            // ttip
+            // 
+            this.ttip.AutomaticDelay = 200;
+            this.ttip.AutoPopDelay = 2000;
+            this.ttip.InitialDelay = 200;
+            this.ttip.ReshowDelay = 40;
             // 
             // FrmConsideraciones
             // 
