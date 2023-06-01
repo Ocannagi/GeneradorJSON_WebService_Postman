@@ -109,6 +109,8 @@ namespace GeneradorVariablesPostmanADUWS
             this.label15 = new System.Windows.Forms.Label();
             this.pcbSRT = new System.Windows.Forms.PictureBox();
             this.ttipCodigo = new System.Windows.Forms.ToolTip(this.components);
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtPath = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSRT)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +122,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.btnJSON.Location = new System.Drawing.Point(823, 12);
             this.btnJSON.Name = "btnJSON";
             this.btnJSON.Size = new System.Drawing.Size(75, 56);
-            this.btnJSON.TabIndex = 94;
+            this.btnJSON.TabIndex = 95;
             this.btnJSON.Text = "Generar JSON";
             this.btnJSON.UseVisualStyleBackColor = false;
             this.btnJSON.Click += new System.EventHandler(this.btnJSON_Click);
@@ -818,6 +820,23 @@ namespace GeneradorVariablesPostmanADUWS
             this.ttipCodigo.InitialDelay = 200;
             this.ttipCodigo.ReshowDelay = 40;
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(254, 16);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(29, 13);
+            this.label34.TabIndex = 113;
+            this.label34.Text = "Path";
+            // 
+            // txtPath
+            // 
+            this.txtPath.Location = new System.Drawing.Point(289, 12);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.Size = new System.Drawing.Size(343, 20);
+            this.txtPath.TabIndex = 94;
+            this.txtPath.Text = "http://adu.desarrolloserviciosweb.desasite.srt.gob.ar/ADU/ADU.asmx";
+            // 
             // FrmActaLocal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -825,6 +844,8 @@ namespace GeneradorVariablesPostmanADUWS
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(910, 533);
+            this.Controls.Add(this.txtPath);
+            this.Controls.Add(this.label34);
             this.Controls.Add(this.pcbSRT);
             this.Controls.Add(this.txtOtrasObservaciones);
             this.Controls.Add(this.label23);
@@ -980,5 +1001,7 @@ namespace GeneradorVariablesPostmanADUWS
         private System.Windows.Forms.PictureBox pcbSRT;
         private System.Windows.Forms.ToolTip ttipCodigo;
         internal System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtPath;
     }
 }
