@@ -111,6 +111,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.MaximizeBox = false;
             this.Name = "FrmIteracion";
             this.Text = "Carga de Iteraciones";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmIteracion_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmIteracion_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

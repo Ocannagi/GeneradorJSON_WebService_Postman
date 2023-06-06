@@ -60,5 +60,13 @@ namespace GeneradorVariablesPostmanADUWS
             else
                 btnJsonIter.Enabled = true;
         }
+
+        private void FrmIteracion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult Op;
+            Op = MessageBox.Show("¿Está seguro de que quiere cerrar el Formulario de iteración? La información de las iteraciones realizadas se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (Op == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

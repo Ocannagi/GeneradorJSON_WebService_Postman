@@ -111,6 +111,7 @@ namespace GeneradorVariablesPostmanADUWS
             this.ttipCodigo = new System.Windows.Forms.ToolTip(this.components);
             this.label34 = new System.Windows.Forms.Label();
             this.txtPath = new System.Windows.Forms.TextBox();
+            this.ttipActaVerificada = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSRT)).BeginInit();
             this.SuspendLayout();
@@ -454,6 +455,8 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtActaVerificada.Name = "txtActaVerificada";
             this.txtActaVerificada.Size = new System.Drawing.Size(78, 20);
             this.txtActaVerificada.TabIndex = 78;
+            this.txtActaVerificada.Enter += new System.EventHandler(this.txtActaVerificada_Enter);
+            this.txtActaVerificada.Leave += new System.EventHandler(this.txtActaVerificada_Leave);
             // 
             // txtHoraEgreso
             // 
@@ -837,6 +840,14 @@ namespace GeneradorVariablesPostmanADUWS
             this.txtPath.TabIndex = 94;
             this.txtPath.Text = "http://adu.desarrolloserviciosweb.desasite.srt.gob.ar/ADU/ADU.asmx";
             // 
+            // ttipActaVerificada
+            // 
+            this.ttipActaVerificada.AutomaticDelay = 100;
+            this.ttipActaVerificada.AutoPopDelay = 6000;
+            this.ttipActaVerificada.InitialDelay = 100;
+            this.ttipActaVerificada.ReshowDelay = 20;
+            this.ttipActaVerificada.ShowAlways = true;
+            // 
             // FrmActaLocal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1003,5 +1014,6 @@ namespace GeneradorVariablesPostmanADUWS
         internal System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox txtPath;
+        private System.Windows.Forms.ToolTip ttipActaVerificada;
     }
 }

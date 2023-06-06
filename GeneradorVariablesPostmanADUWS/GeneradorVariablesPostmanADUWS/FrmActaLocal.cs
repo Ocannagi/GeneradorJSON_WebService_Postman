@@ -2,16 +2,10 @@
 using GeneradorVariablesPostmanADUWS.Funciones;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Text.Json;
-using System.Text.Encodings.Web;
 using System.Dynamic;
+using System.Text.Json;
+using System.Windows.Forms;
 
 namespace GeneradorVariablesPostmanADUWS
 {
@@ -46,6 +40,8 @@ namespace GeneradorVariablesPostmanADUWS
 
             this.ttipCodigo.SetToolTip(lblCodigo, "El Código se encuentra deshabilitado. La Colección de Postman está seteada para completar el valor con lo que devuelve el método Alta");
 
+            this.ttipActaVerificada.SetToolTip(txtActaVerificada, "Si completa el campo 'Acta Verificada', tenga en cuenta que deberá modificar el Body del Método Alta y quitar el 'xsi:nil=\"true\"' de la etiqueta de este campo");
+            
             if (esActaLocal)
             {
                 this.Text = "Acta para correr local en Postman";
@@ -365,16 +361,27 @@ namespace GeneradorVariablesPostmanADUWS
             DialogResult Op;
             if (esActaLocal)
             {
-                Op = MessageBox.Show("¿Está seguro que quiere cerrar el Acta? La información de la presente Acta Local se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                Op = MessageBox.Show("¿Está seguro de que quiere cerrar el Acta? La información de la presente Acta Local se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (Op == DialogResult.No)
                     e.Cancel = true;
             }
             else if (!this.esGuardadoIteracion)
             {
-                Op = MessageBox.Show("¿Está seguro que quiere cerrar el Acta? La información de la presente iteración se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                Op = MessageBox.Show("¿Está seguro de que quiere cerrar el Acta? La información de la presente iteración se perderá", "Verifique", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (Op == DialogResult.No)
                     e.Cancel = true;
             }
+        }
+
+        private void txtActaVerificada_Enter(object sender, EventArgs e)
+        {
+            ttipActaVerificada.Show("Si completa el campo 'Acta Verificada', tenga en cuenta que deberá modificar el Body del Método Alta y quitar el 'xsi:nil=\"true\"' de la etiqueta de este campo",txtActaVerificada);
+            
+        }
+
+        private void txtActaVerificada_Leave(object sender, EventArgs e)
+        {
+            ttipActaVerificada.Hide(txtActaVerificada);
         }
     }
 }
